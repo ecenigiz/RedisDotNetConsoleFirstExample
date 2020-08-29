@@ -40,7 +40,7 @@ namespace RedisDotNetConsoleFirstExample
              {
                  redisCache.Set(listKey + item.Id.ToString(), item, DateTime.Now.AddMinutes(30));//30 dakikalığına user objemizi redis'e atıyoruz
              }
-            //redisCache.Set(listKey, townListToCached, DateTime.Now.AddMinutes(30));
+
             foreach (var item in townListToCached)
             {
                 if (redisCache.Exists(listKey + item.Id.ToString()))
